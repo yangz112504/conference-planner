@@ -13,7 +13,7 @@ export const avSlice = createSlice({
       img: "https://pixabay.com/images/download/speakers-4109274_640.jpg",
       name: 'Speaker',
       cost: 35,
-      quantity, 0
+      quantity: 0
     },
     {
       img: "https://pixabay.com/images/download/public-speaking-3926344_640.jpg",
@@ -23,16 +23,16 @@ export const avSlice = createSlice({
     },
     {
       img: "https://pixabay.com/images/download/whiteboard-2903269_640.png",
-      name: 'wWiteboards',
+      name: 'Whiteboards',
       cost: 80,
       quantity: 0
     },
     {
       img: "https://pixabay.com/images/download/signpost-235079_640.jpg",
-      name: "Signage"
+      name: "Signage",
       cost: 80,
       quantity: 0
-    }
+    },
   ],
   reducers: {
     incrementAvQuantity: (state, action) => {
@@ -44,8 +44,8 @@ export const avSlice = createSlice({
     },
     decrementAvQuantity: (state, action) => {
      const item = state[action.payload];
-     if (item && item.quatity > 0) {
-      item.quantity --;
+     if (item && item.quantity > 0) {
+      item.quantity--;
      }
     },
   },
